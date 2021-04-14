@@ -1,1 +1,3 @@
-# DS-3002-Project1
+This tool takes in a csv file, which is at the same location as the Dockerfile, and runs it through a simple data processing pipeline. The pipeline is in the file script.py and imports the file into Pandas (a data processing library), drops a few columns, and exports the file as json to an S3 bucket. The AWS access keys and secret id keys are to be supplied as command line parameters when running the Docker container.
+To build the Docker container, use: docker build -t project-1 .
+To run the Docker container, use: docker run -e AWS_ACCESS_KEY_ID="access key id here" -e AWS_SECRET_ACCESS_KEY="secret key here" project-1
